@@ -1,0 +1,535 @@
+/* Reset y fondo general negro */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #0d0d1a; /* Azul negro cibernético */
+    color: #fff; /* Texto blanco por defecto */
+}
+
+/* Header centrado con logo y título grandes */
+.header {
+    background-color: #0d0d1a; /* Azul negro cibernético */
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    border-bottom: 2px solid #00ffff; /* Azul eléctrico */
+}
+
+.logo-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #00ffff; /* Azul eléctrico */
+}
+
+.header h1 {
+    font-size: 3rem;
+    margin: 0;
+    color: #00ffff; /* Azul eléctrico */
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Brillo cibernético */
+}
+
+/* Container principal */
+.main-container {
+    display: flex;
+    flex: 1;
+    background-color: #0d0d1a; /* Azul negro cibernético */
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #0d0d1a; /* Azul negro cibernético */
+    padding: 20px 10px;
+    height: calc(100vh - 160px);
+    position: sticky;
+    top: 0;
+    border-right: 1px solid #00ffff; /* Azul eléctrico */
+}
+
+.sidebar nav ul {
+    list-style: none;
+}
+
+.sidebar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 12px 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+    transition: all 0.3s;
+    font-size: 1.1rem;
+}
+
+.sidebar nav ul li a:hover, 
+.sidebar nav ul li a.active {
+    background-color: #00ffff; /* Azul eléctrico */
+    color: #0d0d1a;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
+}
+
+/* Contenido principal */
+.content {
+    flex: 1;
+    padding: 30px;
+    background-color: #0d0d1a; /* Azul negro cibernético */
+    min-height: calc(100vh - 160px);
+}
+
+.content-section {
+    display: none;
+}
+
+.content-section.active {
+    display: block;
+}
+
+/* Sección de inicio */
+.welcome-section {
+    padding: 30px;
+    text-align: center;
+}
+
+.welcome-title {
+    font-size: 4rem;
+    color: #00ffff; /* Azul eléctrico */
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Brillo cibernético */
+}
+
+.welcome-text {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    color: #e6e6e6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Lista de highlights */
+.highlights {
+    background-color: #0d0d1a; /* Azul negro cibernético */
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    border: 1px solid #00ffff; /* Azul eléctrico */
+}
+
+.highlights h3 {
+    color: #00ffff; /* Azul eléctrico */
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    text-align: center;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
+}
+
+.highlights ul {
+    list-style-type: none;
+}
+
+.highlights ul li {
+    padding: 12px 0;
+    font-size: 1.2rem;
+    position: relative;
+    padding-left: 30px;
+    color: #fff;
+}
+
+.highlights ul li::before {
+    content: "•";
+    color: #00ffff; /* Azul eléctrico */
+    font-size: 2rem;
+    position: absolute;
+    left: 0;
+    top: 5px;
+}
+
+/* Footer */
+.footer {
+    background-color: #0d0d1a; /* Azul negro cibernético */
+    color: #fff;
+    padding: 25px;
+    text-align: center;
+    width: 100%;
+    border-top: 2px solid #00ffff; /* Azul eléctrico */
+}
+
+.contactos h3 {
+    color: #00ffff; /* Azul eléctrico */
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
+}
+
+.contactos ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.contactos ul li {
+    font-size: 1.1rem;
+}
+
+.contactos ul li a {
+    color: #00ffff; /* Azul eléctrico */
+    text-decoration: none;
+    transition: all 0.3s;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
+}
+
+.contactos ul li a:hover {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+}
+
+/* Estilos para la sección de Certificados */
+.certificados-container {
+    padding: 30px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #00ffff; /* Azul eléctrico */
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Brillo cibernético */
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    color: #e6e6e6;
+    margin-bottom: 40px;
+}
+
+.certificados-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.certificado-item {
+    background-color: #0d0d1a; /* Azul negro cibernético */
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #00ffff; /* Azul eléctrico */
+}
+
+.certificado-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 255, 255, 0.3);
+}
+
+.certificado-img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #00ffff; /* Azul eléctrico */
+}
+
+.certificado-desc {
+    font-size: 1.1rem;
+    color: #fff;
+    margin-top: 10px;
+}
+
+/* Mensaje de error */
+.error-message {
+    color: #ff6b6b;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(13, 13, 26, 0.95); /* Azul negro cibernético con transparencia */
+    overflow: auto;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #00ffff; /* Azul eléctrico */
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #00ffff; /* Azul eléctrico */
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+}
+
+#caption {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Estilos para la sección Sobre Mí */
+.about-container {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-content {
+    display: grid;
+    gap: 40px;
+}
+
+.highlight-text {
+    font-size: 1.3rem;
+    color: #00ffff; /* Azul eléctrico */
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
+}
+
+.about-skills ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.about-skills li {
+    background-color: #0d0d1a; /* Azul negro cibernético */
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #00ffff; /* Azul eléctrico */
+}
+
+.timeline {
+    position: relative;
+    padding-left: 30px;
+    margin-top: 20px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background: #00ffff; /* Azul eléctrico */
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #0d0d1a; /* Azul negro cibernético */
+    border-radius: 8px;
+    border: 1px solid #00ffff; /* Azul eléctrico */
+}
+
+.timeline-item h4 {
+    color: #00ffff; /* Azul eléctrico */
+    margin-bottom: 10px;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -30px;
+    top: 25px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #00ffff; /* Azul eléctrico */
+    border: 3px solid #0d0d1a; /* Azul negro cibernético */
+}
+
+.vision-text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    padding: 20px;
+    background-color: #0d0d1a; /* Azul negro cibernético */
+    border-radius: 8px;
+    border-top: 3px solid #00ffff; /* Azul eléctrico */
+}
+
+/* Estilos para proyectos */
+.projects-container {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projects-grid {
+    display: grid;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.project-card {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    background-color: #0d0d1a; /* Azul negro cibernético */
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #00ffff; /* Azul eléctrico */
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.3);
+}
+
+.project-image-container {
+    overflow: hidden;
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+    border-right: 1px solid #00ffff; /* Azul eléctrico */
+}
+
+.project-card:hover .project-img {
+    transform: scale(1.05);
+}
+
+.project-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-title {
+    color: #00ffff; /* Azul eléctrico */
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
+}
+
+.project-description {
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.project-description ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+.project-description li {
+    margin-bottom: 5px;
+}
+
+.project-link {
+    display: inline-block;
+    background-color: #00ffff; /* Azul eléctrico */
+    color: #0d0d1a; /* Azul negro cibernético */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s;
+    align-self: flex-start;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+.project-link:hover {
+    background-color: #0d0d1a; /* Azul negro cibernético */
+    color: #00ffff; /* Azul eléctrico */
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+    
+    .welcome-title {
+        font-size: 2.5rem;
+    }
+    
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    
+    .main-container {
+        flex-direction: column;
+    }
+    
+    .project-card {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-image-container {
+        height: 200px;
+    }
+    
+    .about-skills ul {
+        grid-template-columns: 1fr;
+    }
+    
+    .timeline {
+        padding-left: 20px;
+    }
+}
